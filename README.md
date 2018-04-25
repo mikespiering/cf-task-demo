@@ -10,7 +10,7 @@ Deploy the Spring Cloud Task-based application to the platform. This is a Spring
 
 
 ```
-cf push --health-check-type none -p target/demo-0.0.1-SNAPSHOT.jar runner --no-start
+cf push --health-check-type none -p target/demo-0.0.1-SNAPSHOT.jar runner 
 ```
 
 Runs the task using the Task runner. This support for tasks is built into the platform.
