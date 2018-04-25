@@ -17,16 +17,15 @@ public class DemoApplication {
 	
 	@Bean
 	    ApplicationRunner run(DefaultApplicationArguments args2) {
-
-
-	    System.out.println("\nRead All Variables:-\n");
  
+    	    System.out.println("\nRead All Variables:-\n");
+	    
 	    Map <String, String> map = System.getenv();
 	    for (Map.Entry <String, String> entry: map.entrySet()) {
 		System.out.println("Variable Name:- " + entry.getKey() + " Value:- " + entry.getValue());
 	    }
 
-
+	    
 	    for (String arg3 : args2.getSourceArgs()) {
 		log.info(arg3);
 	    
@@ -35,16 +34,15 @@ public class DemoApplication {
 		       log.info("Should call endpoint 1");
 		   }
 		if(arg3.compareTo("endpoint2")==0)
-		      {
-			  log.info("should call endpoint 2");
-		      }
+		    {
+			log.info("should call endpoint 2");
+		    }
 	    
 	    }
-		return args -> log.info("running at " + Instant.now().toString());
+	    return args -> log.info("running at " + Instant.now().toString());
 	}
 
 	public static void main(String[] args) {
-	    log.info("test");
-		SpringApplication.run(DemoApplication.class, args);
+	    SpringApplication.run(DemoApplication.class, args);
 	}
 }
