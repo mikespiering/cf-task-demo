@@ -1,4 +1,4 @@
-# Cloudfoundry Task Demo 6
+# Cloudfoundry Task Demo 7
 
 Build the application.
 
